@@ -11,7 +11,17 @@ body {
   align-items: center;
   font-family: 'Inter', sans-serif;
 }
-
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: underline;
+}
+a>img:hover {
+  filter: invert(80%) sepia(100%) saturate(5775%) hue-rotate(177deg) brightness(122%) contrast(110%);
+  transition: all 0.1s ease-in-out;
+}
 .container {
   text-align: center;
   width: 317px;
@@ -21,9 +31,14 @@ body {
   padding-bottom: 1em;
 }
 /* Info */
-img {
+.avatarImg {
   width: 100%;
   border-radius: 10px 10px 0px 0px;
+  filter: grayscale(100%);
+}
+.avatarImg:hover {
+  filter: grayscale(0);
+  transition: all 0.2s ease-in-out;
 }
 h2.name {
   font-style: normal;
@@ -59,6 +74,12 @@ h6.website {
   gap: 1.5em;
   justify-content: center;
 }
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
 button.emailBtn {
   width: 115px;
   height: 34px;
@@ -78,6 +99,20 @@ button.linkedinBtn {
     border-radius: 6px;
     color: white;
     border: none;
+}
+button:hover {
+  transform: scale(1.05);
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+.buttonLogo {
+  width: 13px;
+}
+.emailBtn>img {
+  filter: invert(8%) sepia(3%) saturate(3767%) hue-rotate(195deg) brightness(98%) contrast(89%);
+}
+.linkedinBtn>img {
+  filter: invert(80%) sepia(100%) saturate(5775%) hue-rotate(177deg) brightness(122%) contrast(110%);
 }
 
 /* About */
